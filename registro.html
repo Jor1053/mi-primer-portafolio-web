@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de registro de clientes con validación nativa y estructura HTML5 accesible.">
+    <title>Registro de Clientes | Portafolio Profesional</title>
+</head>
+<body>
+
+    <form action="#" method="POST">
+
+        <fieldset>
+            <legend>Información Personal</legend>
+            <p>
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+            </p>
+
+            <p>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+            </p>
+
+            <p>
+                <label for="pais">País de Residencia:</label>
+                <select id="pais" name="pais" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="co">Colombia</option>
+                    <option value="es">España</option>
+                    <option value="mx">México</option>
+                </select>
+            </p>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Preferencias y Términos</legend>
+
+            <p>
+                <label>
+                    <input type="checkbox" id="terminos" name="terminos" value="aceptado" required>
+                    Acepto los términos, condiciones y la política de tratamiento de datos comerciales.
+                </label>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Registrar Cuenta</button>
+        </p>
+
+    </form>
+
+</body>
+</html>
