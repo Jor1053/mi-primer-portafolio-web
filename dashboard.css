@@ -1,0 +1,155 @@
+body {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.barra-lateral {
+    width: 260px;
+    height: 100vh;
+    background-color: #1e293b;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.logo-sistema h3 {
+    margin: 0 0 30px 0;
+    font-size: 18pt;
+    color: #38bdf8;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 15px;
+}
+
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-lateral li {
+    margin-bottom: 10px;
+}
+
+.menu-lateral li a {
+    color: #94a3b8;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.menu-lateral li a:hover,
+.menu-lateral li a.activo {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+.contenido-derecho {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    box-sizing: border-box;
+}
+
+.cabecera-superior {
+    background-color: #ffffff;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.usuario-info {
+    font-size: 11pt;
+}
+
+.btn-salir {
+    background-color: #ef4444;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 10pt;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-salir:hover {
+    background-color: #dc2626;
+}
+
+.zona-principal {
+    padding: 30px;
+}
+
+.seccion-metricas h2 {
+    font-size: 16pt;
+    color: #0f172a;
+    margin: 0 0 20px 0;
+}
+
+.cuadrula-metricas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-metrica {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.tarjeta-metrica h4 {
+    margin: 0 0 10px 0;
+    color: #64748b;
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-metrica .numero {
+    margin: 0 0 8px 0;
+    font-size: 24pt;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+.tarjeta-metrica .tendencia {
+    font-size: 9.5pt;
+    color: #64748b;
+}
+
+.tarjeta-metrica .tendencia.positiva {
+    color: #10b981;
+    font-weight: 500;
+}
+
+.seccion-contenido {
+    margin-top: 40px;
+}
+
+.bloque-vacio {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 80px 20px;
+    text-align: center;
+    color: #94a3b8;
+}
