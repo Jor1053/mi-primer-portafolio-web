@@ -1,0 +1,166 @@
+body {
+    background-color: #0c1c15;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.escenario {
+    text-align: center;
+    padding: 20px;
+}
+
+.escenario h1 {
+    font-size: 18pt;
+    color: #00704a;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+#contenedor-robot {
+    width: 300px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 2px dashed #00704a;
+    border-radius: 12px;
+    margin: 0 auto 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#cuerpo-robot {
+    width: 120px;
+    height: 250px;
+    position: absolute;
+    top: 70px;
+    left: 90px;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+#cabeza {
+    width: 70px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border-radius: 15px 15px 5px 5px;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    border: 2px solid #b0bec5;
+}
+
+.ojo-izquierdo, .ojo-derecho {
+    width: 12px;
+    height: 12px;
+    background-color: #00704a;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 0 8px #00704a;
+}
+.ojo-izquierdo { left: 15px; }
+.ojo-derecho { right: 15px; }
+
+#torso {
+    width: 100px;
+    height: 110px;
+    background-color: #78909c;
+    border-radius: 10px;
+    position: absolute;
+    top: 65px;
+    left: 10px;
+    border: 2px solid #455a64;
+}
+
+#pantalla-estado {
+    width: 70px;
+    height: 40px;
+    background-color: #111111;
+    border: 2px solid #00704a;
+    border-radius: 4px;
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    animation: pulsoPantalla 1.5s infinite alternate;
+}
+
+.brazo-izquierdo, .brazo-derecho {
+    width: 16px;
+    height: 80px;
+    background-color: #b0bec5;
+    border-radius: 8px;
+    position: absolute;
+    top: 70px;
+    transform-origin: top center;
+}
+
+.brazo-izquierdo {
+    left: -10px;
+    animation: balanceoBrazoIzq 2s ease-in-out infinite alternate;
+}
+
+.brazo-derecho {
+    right: -10px;
+    animation: balanceoBrazoDer 2s ease-in-out infinite alternate;
+}
+
+.pierna-izquierda, .pierna-derecha {
+    width: 20px;
+    height: 70px;
+    background-color: #455a64;
+    border-radius: 4px;
+    position: absolute;
+    top: 180px;
+    transform-origin: top center;
+}
+
+.pierna-izquierda {
+    left: 20px;
+    animation: marchaPiernaIzq 2s ease-in-out infinite alternate;
+}
+
+.pierna-derecha {
+    right: 20px;
+    animation: marchaPiernaDer 2s ease-in-out infinite alternate;
+}
+
+.instrucciones {
+    font-size: 10pt;
+    color: #64748b;
+    font-style: italic;
+}
+
+@keyframes flotar {
+    0%  { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulsoPantalla {
+    0%  { background-color: #111111; box-shadow: inset 0 0 2px #00704a; }
+    100% { background-color: #0b2e18; box-shadow: inset 0 0 12px #00704a; }
+}
+
+@keyframes balanceoBrazoIzq {
+    0%  { transform: rotate(25deg); }
+    100%  { transform: rotate(-25deg); }
+}
+
+@keyframes balanceoBrazoDer {
+    0%  { transform: rotate(-25deg); }
+    100%  { transform: rotate(25deg); }
+}
+
+@keyframes marchaPiernaIzq {
+    0%  { transform: rotate(-15deg); }
+    100%  { transform: rotate(15deg); }
+}
+
+@keyframes marchaPiernaDer {
+    0%  { transform: rotate(15deg); }
+    100%  { transform: rotate(-15deg); }
+}
