@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de imágenes inyectada de forma dinámica utilizando bucles lógicos en JavaScript.">
+    <title>Galería Automatizada | Portafolio JS</title>
+    <style>
+
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f8fafc; padding: 20px; text-align: center; }
+        h1 { color: #0f172a; }
+        #galeria-renderizada { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; }
+        .foto-automatica { width: 250px; height: 180px; object-fit: cover; border-radius: 8px; border: 2px solid #e2e8f0; }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Galería de Fotos Automatizada con JS</h1>
+        <p>El siguiente contenedor recibe las imágenes dinámicamente procesadas por el motor de JavaScript:</p>
+
+        <section id="galeria-renderizada"></section>
+    </main>
+
+    <script src="galeria-dinamica.js"></script>
+</body>
+</html>
